@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CTF Mission Briefing</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body { background:#0d1117; color:#e6edf3; font-family:Consolas, monospace; }
+.panel { background:#161b22; padding:30px; border-radius:10px; border:1px solid #30363d; margin-top:40px; }
+h1 { color:#58a6ff; text-shadow:0 0 8px #58a6ff; font-weight:bold; }
+.mission { color:#ffa657; font-weight:bold; }
+.step { color:#3fb950; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="panel">
+<h1>🎮 Mission Briefing</h1>
+<p class="mission">Agent, your objective is to infiltrate the target machine and retrieve all hidden flags.</p>
+
+<h3>🛰 Mission Intel</h3>
+<ul>
+<li>Unknown services detected on multiple ports.</li>
+<li>Weak authentication identified.</li>
+<li>File exposure vulnerability confirmed.</li>
+<li>Command execution endpoint discovered.</li>
+</ul>
+
+<h3>📜 Mission Steps</h3>
+<ol>
+<li class="step">Perform recon: <code>nmap -A -p- &lt;IP&gt;</code></li>
+<li class="step">Enumerate directories on the web server.</li>
+<li class="step">Investigate file read endpoints.</li>
+<li class="step">Test possible command injection points.</li>
+<li class="step">Collect evidence (flags) and report extraction.</li>
+</ol>
+
+<!-- Hidden hints -->
+<!-- Try scanning 8080 -->
+<!-- Try scanning 9090 -->
+<!-- Some endpoints use ?file= parameter -->
+<!-- Some flags use base64 encoding -->
+
+</div>
+</div>
+</body>
+</html>

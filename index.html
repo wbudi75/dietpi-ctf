@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CTF Training Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #f5f5f7;
+        color: #222;
+        font-family: "Consolas", "Courier New", monospace;
+        padding-bottom: 40px;
+    }
+
+    .container {
+        margin-top: 40px;
+        max-width: 900px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .title {
+        font-size: 2.4rem;
+        color: #0066cc;
+        font-weight: bold;
+        text-shadow: 0 0 6px #aad6ff;
+    }
+
+    .subtitle {
+        color: #444;
+        opacity: 0.9;
+    }
+
+    .clue {
+        color: #0aa;
+        font-weight: bold;
+    }
+
+    code {
+        background: #eee;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #c7254e;
+    }
+
+    .footer {
+        margin-top: 30px;
+        color: #666;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1 class="title">⚡ CTF Training Machine</h1>
+        <p class="subtitle">
+            Welcome to your Capture The Flag practice environment.  
+            Use your skills to discover services, analyze vulnerabilities, and retrieve hidden flags.
+        </p>
+
+        <hr>
+
+        <h4 class="text-primary">🔥 Your Mission</h4>
+        <p>
+            Several flags have been hidden across this machine.  
+            Each flag is accessible through different vulnerabilities or misconfigurations.
+        </p>
+
+        <hr>
+
+        <h4 class="text-warning">🕵️ Useful Clues</h4>
+        <ul>
+            <li class="clue">Some services might allow <b>anonymous login</b>.</li>
+            <li class="clue">A misconfigured file server exposes interesting things.</li>
+            <li class="clue">A web endpoint allows <b>file reading</b> using a parameter.</li>
+            <li class="clue">Another app executes system commands with no filtering...</li>
+            <li class="clue">Do not ignore high ports — secrets like to hide there.</li>
+        </ul>
+
+        <hr>
+
+        <h4 class="text-success">🛠 Suggested First Steps</h4>
+        <ol>
+            <li>Port scanning: <code>nmap -A -p- &lt;IP&gt;</code></li>
+            <li>Directory enumeration: <code>gobuster dir -u http://&lt;IP&gt;/ -w /usr/share/wordlists/dirb/common.txt</code></li>
+            <li>Check FTP, SMB, HTTP responses carefully.</li>
+            <li>Look for URL parameters like <code>?file=</code> and <code>?host=</code>.</li>
+            <li>Inspect comments in HTML source. Some hints hide there.</li>
+        </ol>
+
+        <!-- Hidden clues -->
+        <!-- Try checking http://<IP>:8080/ -->
+        <!-- Try checking http://<IP>:9090/ -->
+        <!-- robots.txt may contain something -->
+        <!-- Some flags are Base64 encoded -->
+
+        <p><b>Hint:</b> Don't forget to read the source code of this page!</p>
+    </div>
+
+    <div class="footer">CTF Training Environment • wbudi75@yandex.com</div>
+</div>
+
+</body>
+</html>

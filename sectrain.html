@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security Training Portal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body { background:#f4f6f8; color:#1e1e1e; font-family:Segoe UI, sans-serif; }
+.card { margin-top:40px; padding:30px; border-radius:12px; border:1px solid #ccc; background:white; }
+h1 { color:#005bbb; font-weight:bold; }
+.section-title { color:#333; font-weight:600; }
+.code { background:#eef; padding:4px 8px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+
+<h1>🔐 Security Training Professional</h1>
+<p>Welcome to the hands-on security assessment module. This environment simulates real-world vulnerabilities for training.</p>
+
+<h3 class="section-title">📘 Objectives</h3>
+<ul>
+<li>Identify exposed services.</li>
+<li>Perform safe enumeration.</li>
+<li>Analyze weak authentication.</li>
+<li>Exploit vulnerabilities to extract flags.</li>
+</ul>
+
+<h3 class="section-title">🛠 Recommended Tools</h3>
+<ul>
+<li><b>Nmap</b> — full network scanning</li>
+<li><b>Gobuster</b> — directory enumeration</li>
+<li><b>Enum4linux</b> — SMB analysis</li>
+<li><b>cURL / BurpSuite</b> — HTTP testing</li>
+</ul>
+
+<h3 class="section-title">📌 Standard Procedure</h3>
+<ol>
+<li>Recon: <span class="code">nmap -A -p- &lt;IP&gt;</span></li>
+<li>Identify weaker services.</li>
+<li>Check endpoint behaviors.</li>
+<li>Extract flags as evidence.</li>
+</ol>
+
+<!-- hidden clues -->
+<!-- Misconfigured SMB share -->
+<!-- Try anonymous FTP -->
+<!-- Web LFI endpoint exists -->
+
+</div>
+</div>
+</body>
+</html>
